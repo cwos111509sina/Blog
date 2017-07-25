@@ -22,7 +22,8 @@ EMCallSession 会话信息
     [[EMClient sharedClient].callManager addDelegate:self delegateQueue:nil];
 ```
 使用到的代理方法主要有： 
-- (void)callDidReceive:(EMCallSession *)aSession 
+
+(void)callDidReceive:(EMCallSession *)aSession 
 //用户A拨打用户B用户B会收到这个回调、你希望在哪个页面可以监听被呼叫就把这个方法写在里面，记得遵守协议；
 
 (void)callDidConnect:(EMCallSession *)aSession 
