@@ -135,7 +135,7 @@ EMMessageBodyTypeCmd,           命令类型
     }];
 ```
 
-[项目链接](https://github.com/cwos111509sina/EMChatText.git)  
+[项目地址](https://github.com/cwos111509sina/EMChatText.git)  
 
 如果运行报下面错误   
 
