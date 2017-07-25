@@ -2,8 +2,7 @@
 
 ##  iOS webview与Js的交互。以及修改cookie、header头
 
-
-昨天写了Swift和js的交互，既然写了就把OC的也写了出来：
+<br>
 
 第一部分：webview与Js的交互 
 第二部分：设定cookie 
