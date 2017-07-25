@@ -19,7 +19,7 @@
 
 [ iOS 自定义表情键盘](http://blog.csdn.net/create_pro/article/details/59577219)
 
-[ iOS [UIButton setImageEdgeInsets||setTitleEdgeInsets]属性](http://blog.csdn.net/create_pro/article/details/70917096)
+[ iOS UIButton setImageEdgeInsets setTitleEdgeInsets属性](http://blog.csdn.net/create_pro/article/details/70917096)
 
 [ swift 3.0 - cannot invoke 'GCRect.Type.init' with an argumentment list of type](http://blog.csdn.net/create_pro/article/details/59543411)
 
