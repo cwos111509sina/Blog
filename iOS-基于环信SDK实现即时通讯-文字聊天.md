@@ -7,9 +7,9 @@
 
 下载完成后把HyphenateFullSDK文件夹拉入项目：   
 
-![](http://img.blog.csdn.net/20170316113404094?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvY3JlYXRlX3Bybw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)  
+![](https://cwos111509sina.github.io/Blog/Source/iOS-基于环信SDK实现即时通讯-文字聊天/chat_0.jpeg)  
 在Embedded Binaries目录下点击加号添加Hyphenate.framework:   
-![](http://img.blog.csdn.net/20170316113616251?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvY3JlYXRlX3Bybw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)  
+![](https://cwos111509sina.github.io/Blog/Source/iOS-基于环信SDK实现即时通讯-文字聊天/chat_1.jpeg)  
 
 在AppDelegate.m导入环信库文件   
 #import <Hyphenate/Hyphenate.h>   
@@ -20,7 +20,7 @@
   EMOptions *options = [EMOptions optionsWithAppkey:@"1156170310178775#emchattext"];//这里的key是自己在环信注册应用时环信给的appkey
   [[EMClient sharedClient] initializeSDKWithOptions:options];
 ```
-![](http://img.blog.csdn.net/20170316114210066?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvY3JlYXRlX3Bybw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)  
+![](https://cwos111509sina.github.io/Blog/Source/iOS-基于环信SDK实现即时通讯-文字聊天/chat_2.jpeg)  
 在- (void)applicationDidEnterBackground:(UIApplication *)application 程序进入后台方法中调用环信方法  
 ```
     [[EMClient sharedClient] applicationDidEnterBackground:application];
@@ -139,8 +139,8 @@ EMMessageBodyTypeCmd,           命令类型
 
 如果运行报下面错误   
 
-![](http://img.blog.csdn.net/20170316144621746?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvY3JlYXRlX3Bybw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)  
+![](https://cwos111509sina.github.io/Blog/Source/iOS-基于环信SDK实现即时通讯-文字聊天/chat_3.jpeg)  
 需要自己下载环信SDK文件中的HyphoenateFullSDK/Hyphoenate.framework/Hyphoenate放到EMChatText项目HyphoenateFullSDK/Hyphoenate.framework目录下，下图：   
-![](http://img.blog.csdn.net/20170316145100699?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvY3JlYXRlX3Bybw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+![](https://cwos111509sina.github.io/Blog/Source/iOS-基于环信SDK实现即时通讯-文字聊天/chat_4.jpeg)
 
 [返回首页](https://cwos111509sina.github.io/Blog/)
