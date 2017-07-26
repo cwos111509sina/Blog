@@ -26,7 +26,7 @@
 
 第六步： 
 
-![](https://cwos111509sina.github.io/Blog/GitHub/Source/快速创建GitHub-Blog/5.png)
+![](https://cwos111509sina.github.io/Blog/GitHub/Source/快速创建GitHub-Blog/5.jpeg)
 
 
 
