@@ -2,13 +2,20 @@
 ## iOS-车牌号输入键盘
 
 
-重点：
-  通过替换UITextField的inputView展示自定义键盘
-  获取当前系统响应链第一响应者：UIResponder并没有提供直接获取的方法、这里调用sendAction：to：from：forEvent：方法。
-                           当target为空时、系统会遍历响应链由第一响应者响应事件，这样我们就获取到第一响应者。
-                           我们通过获取到的responder实现键盘数字的输入及退格操作
-  复制粘贴时键盘的切换键钮状态：通过UIControlEventEditingChanged获取键盘点击后输入框内容的改变
-                           在textField:shouldChangeCharactersInRange:replacementString:获取复制粘贴内容及进行规则判断
+### 重点：
+
+#### 通过替换UITextField的inputView展示自定义键盘
+
+#### 获取当前系统响应链第一响应者：
+
+UIResponder并没有提供直接获取的方法、这里调用sendAction：to：from：forEvent：方法。
+当target为空时、系统会遍历响应链由第一响应者响应事件，这样我们就获取到第一响应者。
+我们通过获取到的responder实现键盘数字的输入及退格操作
+
+#### 复制粘贴时键盘的切换键钮状态：
+
+通过UIControlEventEditingChanged获取键盘点击后输入框内容的改变
+在textField:shouldChangeCharactersInRange:replacementString:获取复制粘贴内容及进行规则判断
                            
  ```
  //ViewController.m
@@ -100,7 +107,7 @@
  @end
  
 ```
-  PlateInputView
+## PlateInputView
 ```
  //  PlateInputView.h 文件
  
