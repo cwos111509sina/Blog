@@ -7,8 +7,8 @@
 ### 调用方式
 ```
 
- [[DatePicker shareManager]showWithType:button.tag-1000 title:nil time:button.titleLabel.text backTime:^(NSString * _Nonnull backTimeStr) {
-        [button setTitle:backTimeStr forState:UIControlStateNormal];
+ [[DatePicker shareManager]showWithType:PickerTypeDay title:nil time:@"2018:10:31" backTime:^(NSString * _Nonnull backTimeStr) {
+        NSLog(@"%@",backTimeStr);
     }];
 
 ```
