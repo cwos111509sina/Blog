@@ -214,31 +214,34 @@ typedef NS_ENUM (NSInteger ,PickerType){
 
 -(UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view{
     
-    UILabel * lab = (UILabel *)view;
+     UILabel * lab = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, (pickerView.bounds.size.width-10)/(_pickerType<6?_pickerType:(_pickerType-4)), pickerView.frame.size.height/3)];
+    lab.font = [UIFont systemFontOfSize:14];
+    lab.textAlignment = NSTextAlignmentCenter;
     
-    if (!lab) {//显示选中行单位
-        lab = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, (pickerView.bounds.size.width-10)/(_pickerType<6?_pickerType:(_pickerType-4)), pickerView.frame.size.height/3)];
-        lab.font = [UIFont systemFontOfSize:14];
-        lab.textAlignment = NSTextAlignmentCenter;
-    }
-    
-    if (row == [pickerView selectedRowInComponent:component]) {
-        NSMutableArray * array = [[NSMutableArray alloc]initWithArray:@[@"年",@"月",@"日",@"时",@"分"]];
+    if (_selDateArray.count == _dataArray.count) {
+
+        if (row == [pickerView selectedRowInComponent:component]) {
+            NSMutableArray * array = [[NSMutableArray alloc]initWithArray:@[@"年",@"月",@"日",@"时",@"分"]];
         
-        if (_pickerType>5) {
-            for (int i = 0; i<9-_pickerType; i++) {
-                [array removeObjectAtIndex:0];
+            if (_pickerType>5) {
+                for (int i = 0; i<9-_pickerType; i++) {
+                    [array removeObjectAtIndex:0];
+                }
             }
+        
+            NSString * str = [NSString stringWithFormat:@"%@%@",_dataArray[component][row],array[component]];
+            NSMutableAttributedString * attrubutedStr = [[NSMutableAttributedString alloc]initWithString:str];
+        
+            [attrubutedStr setAttributes:@{NSForegroundColorAttributeName:[UIColor lightGrayColor]} range:NSMakeRange([str rangeOfString:array[component]].location, 1)];
+        
+            lab.textColor = [UIColor redColor];
+            lab.attributedText = attrubutedStr;
+        
+        }else{
+            lab.text = _dataArray[component][row];
+            lab.textColor = [UIColor blackColor];
+        
         }
-        
-        NSString * str = [NSString stringWithFormat:@"%@%@",_dataArray[component][row],array[component]];
-        NSMutableAttributedString * attrubutedStr = [[NSMutableAttributedString alloc]initWithString:str];
-        
-        [attrubutedStr setAttributes:@{NSForegroundColorAttributeName:[UIColor lightGrayColor]} range:NSMakeRange([str rangeOfString:array[component]].location, 1)];
-        
-        lab.textColor = [UIColor redColor];
-        lab.attributedText = attrubutedStr;
-        
     }else{
         lab.text = _dataArray[component][row];
         lab.textColor = [UIColor blackColor];
