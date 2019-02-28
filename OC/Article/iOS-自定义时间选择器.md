@@ -160,7 +160,7 @@ typedef NS_ENUM (NSInteger ,PickerType){
         [_pickerView reloadAllComponents];
         
         for (int i = 0; i<count; i++) {
-            [_pickerView selectRow:[_dataArray[i] indexOfObject:timeArr[i]] inComponent:i animated:YES];
+            [pickerView selectRow:[_dataArray[i] containsObject:timeArr[i]]?[_dataArray[i] indexOfObject:timeArr[i]]:0 inComponent:i animated:YES];
         }
         [_selDateArray addObjectsFromArray:timeArr];
     }else{//不需要显示传入的时间
