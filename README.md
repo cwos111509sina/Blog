@@ -24,7 +24,7 @@
 
 [11.iOS 自定义时间选择器Datepicker](https://cwos111509sina.github.io/Blog/OC/Article/iOS-自定义时间选择器)
 
-[12.iOS 自定义时间选择器Datepicker](https://cwos111509sina.github.io/Blog/OC/Article/iOS-基于FMDB的二次封装)
+[12.iOS 基于FMDB的二次封装](https://cwos111509sina.github.io/Blog/OC/Article/iOS-基于FMDB的二次封装)
 
 [13.swift 3.0 - cannot invoke 'GCRect.Type.init' with an argumentment list of type](https://cwos111509sina.github.io/Blog/swift/Article/swift-3.0-cannot-invoke-'GCRect.Type.init'-with-an-argumentment-list-of-type)
 
